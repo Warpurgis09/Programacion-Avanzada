@@ -5,15 +5,15 @@
 
 using namespace std;
 
-/*Se Crea la clase Circulo: con los métodos: Area, Diametro y Perimetro*/
+/*Se Crea la clase Circulo: con los mÃ©todos: Area, Diametro y Perimetro*/
 class Circulo {
     	//Datos miembros PRIVADOS
     	float radio;
-    //Miembros Métodos PUBLICOS  de la clase
+    //Miembros MÃ©todos PUBLICOS  de la clase
     public:
     	//Constructor: se necesita que al instanciar el objeto se de el valor del radio
    		Circulo(float radio);
-        //Primer miembro de la clase: Cálculo del área
+        //Primer miembro de la clase: CÃ¡lculo del Ã¡rea
         void area(){
             float area = 3.14159*radio*radio;
             cout << "El area del circulo es: " << area << endl;
@@ -81,7 +81,7 @@ Persona::Persona(string _nombre, int _edad){
 	edad = _edad;
 }
 
-//Creación de la clase Profesor que hereda caracteristicas de las personas
+//CreaciÃ³n de la clase Profesor que hereda caracteristicas de las personas
 class Profesor : public Persona{
 		//Miembros privados de la clase persona: area(Area de trabajo)
 	    string area;
@@ -90,9 +90,9 @@ class Profesor : public Persona{
 		Profesor(string nombre, int edad, string area);
 		//Primer miembro de la clase profesor: Presentarse
 		void presentarse(){
-    		cout << "\nMi nombre es: "<<nombre<<endl;
-    		cout << "Mi edad es: "<<edad<<endl;
-    		cout << "Mi area de trabajo es: "<<area<<endl;
+    			cout << "\nMi nombre es: "<<nombre<<endl;
+    			cout << "Mi edad es: "<<edad<<endl;
+    			cout << "Mi area de trabajo es: "<<area<<endl;
 		}
 };
 
@@ -105,11 +105,14 @@ Profesor::Profesor(string _nombre, int _edad, string _area){
 int main(){
 	//Se declaran la variables con las que se crean los objetos
     float radio,altura,base;
-    //En esta sección se le pide al usuario los datos del circulo
+	
+    //En esta secciÃ³n se le pide al usuario los datos del circulo
     cout<< "Ingrese el radio del circulo: \n";
     cin>>radio;
+	
     //Se crea un objeto de nombre "circulo1" con los datos ingresados por el usuario
     Circulo circulo1 = Circulo(radio);
+	
     //Se utilizan los miembros metodos del Circulo
     circulo1.area();
     circulo1.perimetro();
@@ -117,15 +120,19 @@ int main(){
     
     cout << "\n\nTriangulo rectangulo:\n\n";
     //Se supone que los datos del triangulo ya existen
+	
     Triangulo_rectangulo triangulo1 = Triangulo_rectangulo(12,10);
     //Se utilizan los miembros metodos del Trinagulo_rectangulo
+	
     //No se llama el metodo de la "hipotenusa porque este ya se llama dentro del metodo del "perimetro" no es necesario llamarlo de nuevo"
     triangulo1.perimetro();
     
     cout << "\n\nPersonas\n\n";
     //Se supone que los datos de las personas ya existen
+	
     Persona andres = Persona("Andres",1875);
     //Se utilizan los miebros metodos de la persona
+	
     andres.presentarse();
     
 
