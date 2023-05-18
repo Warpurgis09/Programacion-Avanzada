@@ -27,6 +27,7 @@ public class FormatoTiempo{
     Date d = new Date();
     System.out.print("Presentación 3 de Fecha y Hora:  ");
     System.out.println(d.toString());
-    
+    //Aquí obtienes el formato que deseas
+    System.out.println(new SimpleDateFormat("dd-MM-yyyy").format(myDate));
   }
 }
